@@ -1,0 +1,31 @@
+<h1>Listing book_words</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bookid</th>
+      <th>Wordid</th>
+      <th>Count</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book_words.each do |book_word| %>
+      <tr>
+        <td><%= book_word.bookid %></td>
+        <td><%= book_word.wordid %></td>
+        <td><%= book_word.count %></td>
+        <td><%= link_to 'Show', book_word %></td>
+        <td><%= link_to 'Edit', edit_book_word_path(book_word) %></td>
+        <td><%= link_to 'Destroy', book_word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book word', new_book_word_path %>

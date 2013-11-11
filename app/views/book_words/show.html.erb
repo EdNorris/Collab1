@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bookid:</strong>
+  <%= @book_word.bookid %>
+</p>
+
+<p>
+  <strong>Wordid:</strong>
+  <%= @book_word.wordid %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @book_word.count %>
+</p>
+
+<%= link_to 'Edit', edit_book_word_path(@book_word) %> |
+<%= link_to 'Back', book_words_path %>
